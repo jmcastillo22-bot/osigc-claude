@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "osigc-claude",
+  "owner": {
+    "name": "OSI Global Consulting",
+    "url": "https://osigc.com"
+  },
+  "plugins": [
+    {
+      "name": "osigc",
+      "source": "./plugins/osigc",
+      "description": "Marca, white-label y copy B2B de OSI Global Consulting: sistema de diseño (tokens navy/azul, Plus Jakarta + Inter, React+Vite+Tailwind), white-label total de la plataforma y copywriting B2B humano para LinkedIn/email/web. Incluye MCP por defecto (context7, playwright, github).",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jose M. Castillo García",
+        "url": "https://osigc.com"
+      },
+      "homepage": "https://osigc.com",
+      "license": "MIT",
+      "keywords": ["osigc", "design-tokens", "white-label", "b2b-copy", "marketing"]
+    }
+  ]
+}
