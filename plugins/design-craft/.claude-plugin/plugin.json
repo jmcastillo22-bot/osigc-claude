@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "design-craft",
+  "version": "1.0.0",
+  "description": "Pack de craft de diseño frontend: tres skills de terceros para subir el nivel de cualquier UI. emil-design-eng (filosofía de pulido de Emil Kowalski), impeccable (diseñar/auditar/pulir interfaces con sistema de tokens) y design-taste-frontend (anti-slop para landings, portfolios y rediseños).",
+  "author": {
+    "name": "Jose M. Castillo García",
+    "url": "https://osigc.com"
+  },
+  "homepage": "https://osigc.com",
+  "license": "MIT",
+  "keywords": ["design", "frontend", "ui", "ux", "polish", "anti-slop", "design-system"],
+  "skills": "./skills/"
+}

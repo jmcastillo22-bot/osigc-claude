@@ -18,6 +18,19 @@
       "homepage": "https://osigc.com",
       "license": "MIT",
       "keywords": ["osigc", "design-tokens", "white-label", "b2b-copy", "marketing"]
+    },
+    {
+      "name": "design-craft",
+      "source": "./plugins/design-craft",
+      "description": "Pack de craft de diseño frontend (skills de terceros): emil-design-eng (filosofía de pulido de Emil Kowalski), impeccable (diseñar/auditar/pulir interfaces con sistema de tokens) y design-taste-frontend (anti-slop para landings, portfolios y rediseños). Para subir el nivel visual de cualquier web del estudio.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Jose M. Castillo García",
+        "url": "https://osigc.com"
+      },
+      "homepage": "https://osigc.com",
+      "license": "MIT",
+      "keywords": ["design", "frontend", "ui", "ux", "polish", "anti-slop", "design-system"]
     }
   ]
 }

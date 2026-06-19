@@ -21,11 +21,23 @@ export GITHUB_PERSONAL_ACCESS_TOKEN=... # github
 # playwright no requiere credencial
 ```
 
+## Plugin: `design-craft`
+
+Pack de craft de diseño frontend (skills de terceros) para subir el nivel visual de cualquier web del estudio.
+
+### Skills
+- **emil-design-eng** — filosofía de pulido de UI de Emil Kowalski: detalles invisibles, animación con criterio, componentes que se sienten bien.
+- **impeccable** — diseñar/auditar/pulir/optimizar interfaces con sistema de tokens; jerarquía visual, accesibilidad, motion, micro-interacciones, copy de UX (Apache 2.0).
+- **design-taste-frontend** — anti-slop para landings, portfolios y rediseños; lee el brief, infiere la dirección correcta y evita lo que parece plantilla.
+
+> Skills de terceros, incluidas verbatim conservando licencia y atribución originales.
+
 ## Instalación
 
 ```
-/plugin marketplace add /root/osigc-claude
+/plugin marketplace add /root/osigc-claude   # o el repo remoto de GitHub
 /plugin install osigc@osigc-claude
+/plugin install design-craft@osigc-claude
 ```
 
 (o apuntando al repo remoto una vez publicado en GitHub).
