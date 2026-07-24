@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "osigc",
   "version": "1.0.0",
-  "description": "Marca, white-label y copy B2B de OSI Global Consulting. Empaqueta tres skills (osigc-design, osigc-odoo-whitelabel, osigc-copy-b2b) y los MCP por defecto del equipo.",
+  "description": "Marca, white-label y copy B2B de OSI Global Consulting. Empaqueta skills (osigc-design, osigc-odoo-whitelabel, osigc-copy-b2b, osigc-deploy, osigc-visual-system), hooks de calidad (lint/test adaptativos) y los MCP por defecto del equipo.",
   "author": {
     "name": "Jose M. Castillo García",
     "url": "https://osigc.com"
@@ -12,5 +12,6 @@
   "keywords": ["osigc", "design-tokens", "white-label", "b2b-copy", "marketing"],
   "skills": "./skills/",
   "commands": "./commands/",
+  "hooks": "./hooks/hooks.json",
   "mcpServers": "./.mcp.json"
 }
