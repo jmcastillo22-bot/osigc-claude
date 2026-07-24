@@ -115,7 +115,12 @@ nada específico de un proyecto concreto.
 
 ## Estilo de trabajo
 - Confirmaciones breves: resultados, diffs y puntos críticos. No resumir lo obvio.
+  Sin preámbulos de lo que voy a hacer ni resúmenes de lo hecho, salvo error o
+  decisión que requiera aprobación.
+- Mostrar EVIDENCIA (salida de tests, exit codes, diffs), nunca afirmaciones de éxito.
+- No explicar código salvo que se pida.
 - Actuar cuando ya tengo los datos; no pedir confirmación para lo no crítico.
+- Ante una tarea ambigua: UNA pregunta aclaratoria antes de codear, no adivinar.
 - Propagar cualquier corrección a TODOS los ficheros afectados, no solo al primero.
 - Parar tras 2 intentos fallidos del mismo comando: reportar y esperar input.
 - No refactorizar fuera del scope ni añadir dependencias sin justificar.
