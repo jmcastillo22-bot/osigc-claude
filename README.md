@@ -13,6 +13,11 @@ Empaqueta la marca, el white-label y el copy B2B de OSIGC, más los MCP por defe
 - **osigc-deploy** — despliegue de beta.osigc.cloud: rutas del VPS, `deploy-beta.sh` aditivo (nunca `--clean` salvo publicación), trampas de assets/páginas generadas.
 - **osigc-visual-system** — sistema visual de la landing osigc-beta (réplica del template Consultia): tokens remapeados (coal=blanco, paper=negro), azul de acción #2067AC. Distinto de la marca corporativa (osigc-design).
 
+### Slash commands (`plugins/osigc/commands/`)
+- **/landing-sector `<sector>`** — genera una landing de captación de sector (transporte/logística SME en España) con el sistema de diseño OSIGC y la oferta Etapa 1 (CRM 149€/mes). Aplica la skill `osigc-design`.
+- **/odoo-addon-review `<ruta>`** — revisa un addon de Odoo 19 reportando por `fichero:línea`: fail-open en webhooks/controllers, secretos hardcodeados, footgun `limit=0` y APIs eliminadas en v19.
+- **/post-linkedin `<tema>`** — redacta un post de LinkedIn en español, tono humano, sobre optimización de procesos, sin cadencia de IA y con el enlace en el primer comentario. Aplica la skill `osigc-copy-b2b`.
+
 ### Hooks (`plugins/osigc/hooks/hooks.json`)
 Calidad determinista, adaptativos y por-proyecto:
 - **lint-edited.sh** (PostToolUse Edit|Write) — detecta el linter del proyecto del archivo editado (eslint/oxlint/ruff) en runtime. No-bloqueante; sin linter → no hace nada.
@@ -48,3 +53,22 @@ Pack de craft de diseño frontend (skills de terceros) para subir el nivel visua
 ```
 
 (o apuntando al repo remoto una vez publicado en GitHub).
+
+## `setup-claude.sh` — bootstrap del entorno
+
+Deja una máquina (VPS o local) con el entorno Claude Code del equipo. **Idempotente**: seguro re-ejecutarlo (comprueba antes de actuar, no pisa lo existente). Qué hace:
+
+1. **Preflight** — exige `claude` y `jq` en PATH; avisa si falta `npx`.
+2. **Plugins externos** — añade los marketplaces `claude-plugins-official` y `ui-ux-pro-max-skill` e instala `superpowers`, `frontend-design` y `ui-ux-pro-max` (scope usuario).
+3. **MCP base** — `playwright` (sin clave), `context7` y `github`. Las credenciales se guardan como **referencia `${VAR}`, nunca en claro**; si la env var no está, omite ese servidor y avisa.
+4. **CLAUDE.md global** — crea `~/.claude/CLAUDE.md` con las reglas universales (idioma/tono, seguridad de infra, secretos, estilo de trabajo) solo si no existe; nunca pisa el tuyo.
+5. **Hook de seguridad `PreToolUse`** — instala `guard-destructive.sh` y lo cablea en `settings.json`: pide confirmación ante `rm -rf`, `dropdb`/`DROP DATABASE`, `TRUNCATE`, `docker restart/stop/rm/down` sobre odoo19/postgres16/n8n y `rsync`/`scp` a producción. No bloquea lecturas ni el ámbito `/home/claude`/`beta`.
+6. **Smoke test** — resume plugins, MCP, CLAUDE.md, hook y verifica que los secretos estén como referencia y no en claro.
+
+```bash
+export CONTEXT7_API_KEY=...             # opcional; sin ella se omite context7
+export GITHUB_PERSONAL_ACCESS_TOKEN=... # opcional; sin ella se omite github
+./setup-claude.sh
+```
+
+Todo lo que instala es gratuito/open. Los plugins y MCP nuevos cargan al iniciar la **próxima** sesión de `claude`.
