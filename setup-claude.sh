@@ -54,12 +54,29 @@ install_plugin  "superpowers@claude-plugins-official"    "superpowers"
 install_plugin  "frontend-design@claude-plugins-official" "frontend-design"
 install_plugin  "ui-ux-pro-max@ui-ux-pro-max-skill"      "ui-ux-pro-max"
 
-# ---------- 2. MCP base (claves por env var, nunca en claro) ----------
+# ---------- 2. Navegador: agent-browser (sustituye al MCP de Playwright) ----------
+# Medido 2026-07-30: agent-browser (snapshot -i -c) gasta ~4x menos tokens que
+# Playwright sobre las mismas páginas. Playwright queda retirado; si está, se avisa.
+hdr "Navegador agent-browser"
+if command -v npm >/dev/null 2>&1; then
+  if command -v agent-browser >/dev/null 2>&1; then c_skip "agent-browser ya instalado ($(agent-browser --version 2>/dev/null))"
+  else npm install -g agent-browser >/dev/null 2>&1 \
+       && c_ok "agent-browser instalado ($(agent-browser --version 2>/dev/null))" || c_err "no pude instalar agent-browser"; fi
+  if command -v agent-browser >/dev/null 2>&1; then
+    agent-browser install >/dev/null 2>&1 && c_ok "navegador de agent-browser descargado" || c_warn "fallo descargando el navegador (agent-browser install)"
+    # Skill enlazada al paquete: se actualiza sola con cada npm update.
+    AB_SKILL="$(npm root -g 2>/dev/null)/agent-browser/skills/agent-browser"
+    mkdir -p "$CLAUDE_DIR/skills"
+    if [ -e "$CLAUDE_DIR/skills/agent-browser" ]; then c_skip "skill agent-browser ya enlazada"
+    elif [ -d "$AB_SKILL" ]; then ln -s "$AB_SKILL" "$CLAUDE_DIR/skills/agent-browser" && c_ok "skill agent-browser enlazada en ~/.claude/skills"
+    else c_warn "no encuentro la skill en $AB_SKILL — enlázala a mano"; fi
+  fi
+else c_warn "falta npm — omito agent-browser (instala node y re-ejecuta)"
+fi
+if mcp_present playwright; then c_warn "MCP playwright sigue configurado — retíralo: claude mcp remove playwright -s user"; fi
+
+# ---------- 2b. MCP base (claves por env var, nunca en claro) ----------
 hdr "Servidores MCP"
-# Sin clave:
-if mcp_present playwright; then c_skip "playwright ya configurado"
-else claude mcp add -s user playwright -- npx -y @playwright/mcp@latest >/dev/null 2>&1 \
-     && c_ok "playwright añadido" || c_err "no pude añadir playwright"; fi
 
 # context7 (CONTEXT7_API_KEY):
 if mcp_present context7; then c_skip "context7 ya configurado"
@@ -112,6 +129,17 @@ nada específico de un proyecto concreto.
   fichero (código, config, compose, docs, reports) ni en el chat.
 - Referenciar siempre variables de entorno o ficheros de secretos con permisos 600.
 - Si detecto un secreto en claro, lo señalo como regresión en vez de propagarlo.
+
+## Navegador
+- Navegador PRIORITARIO para toda tarea web: `agent-browser` (CLI). Antes de usarlo
+  en una sesión: `agent-browser skills get core` (la guía va versionada con la CLI).
+- Snapshot siempre compacto: `agent-browser snapshot -i -c`. Los refs `@e1` caducan
+  cuando la página cambia: re-snapshot tras cada clic.
+- Sitios con Cloudflare agresivo (claude.ai, Perplexity…): el Chrome propio de
+  agent-browser es bloqueado. Conectar por CDP a un Chrome real:
+  `~/.claude/bin/ab-chrome` (si existe en la máquina) y `agent-browser --cdp 9222 …`.
+- NO usar Playwright ni MCP de navegador salvo que lo pida explícitamente:
+  gasta ~4x más tokens por página (medido 2026-07-30).
 
 ## Estilo de trabajo
 - Confirmaciones breves: resultados, diffs y puntos críticos. No resumir lo obvio.
