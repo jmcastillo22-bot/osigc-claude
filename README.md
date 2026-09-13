@@ -39,12 +39,35 @@ Pack de craft de diseño frontend (skills de terceros) para subir el nivel visua
 
 > Skills de terceros, incluidas verbatim conservando licencia y atribución originales.
 
+## Plugin: `lch`
+
+Innegociables del proyecto **CVH PRECAST S.L. / La Casa de Hormigón** (`lch.osigc.cloud`).
+Guardarraíles de cliente: fija el entorno, las prohibiciones y los gates para que una
+sesión nueva no tenga que redescubrirlos.
+
+### Skills
+- **lch-innegociables** — staging (`lch.osigc.cloud`) es el único entorno de trabajo;
+  producción es solo baseline de lectura. Prohibido instalar plugins de WordPress y
+  editar `_elementor_data`. Registro de cambios con SHA-256 y los 7 quality gates
+  bloqueantes. **Manda sobre las skills genéricas de diseño.**
+- **lch-formulario** — dos plantillas globales (particulares y profesionales) con un
+  esquema único de 8 campos ocultos, el campo `puerta` que protege el KPI C1, evento
+  GA4 único y gate de tests en 2 plantillas × 5 breakpoints.
+- **lch-doble-puerta** — la portada enruta en vez de vender, sin pantalla de selección
+  previa. Árbol de páginas, estructura fija de las fichas `/soluciones/`, taxonomía de
+  CTAs y copy prohibido.
+
+> Contexto documental en `docs/clientes/lch/`. Los datos pendientes del cliente viven en
+> `docs/clientes/lch/pendientes-cliente.md`: mientras falten, placeholder ámbar, nunca
+> una cifra inventada.
+
 ## Instalación
 
 ```
 /plugin marketplace add /root/osigc-claude   # o el repo remoto de GitHub
 /plugin install osigc@osigc-claude
 /plugin install design-craft@osigc-claude
+/plugin install lch@osigc-claude
 ```
 
 (o apuntando al repo remoto una vez publicado en GitHub).

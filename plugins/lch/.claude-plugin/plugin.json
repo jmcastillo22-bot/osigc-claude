@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "lch",
+  "version": "0.1.0",
+  "description": "Innegociables del proyecto CVH PRECAST / La Casa de Hormigón (lch.osigc.cloud): entorno de trabajo staging, restricciones de WordPress+Elementor, esquema de medición del formulario de doble puerta y quality gates bloqueantes. Manda sobre cualquier skill genérica de diseño.",
+  "author": {
+    "name": "Jose M. Castillo García",
+    "url": "https://osigc.com"
+  },
+  "homepage": "https://osigc.com",
+  "license": "MIT",
+  "keywords": ["cvh-precast", "lacasadehormigon", "wordpress", "elementor", "b2b", "guardrails"],
+  "skills": "./skills/"
+}
