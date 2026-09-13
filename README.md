@@ -57,6 +57,14 @@ sesión nueva no tenga que redescubrirlos.
   previa. Árbol de páginas, estructura fija de las fichas `/soluciones/`, taxonomía de
   CTAs y copy prohibido.
 
+### Hook (`plugins/lch/hooks/hooks.json`)
+- **form-gate.sh** (Stop) — gate §9.2: el formulario no se da por bueno sin test verde.
+  **Autoactivable**: mientras no exista `tests/form.spec.ts` en el cwd de la sesión (es
+  decir, mientras no exista el repo del tema hijo) no hace nada. Cuando existe, bloquea
+  el fin de turno si la suite falla o si solo cubre una de las dos puertas. Si la suite
+  existe pero Playwright no está instalado, avisa por stderr de que el gate **no se ha
+  evaluado** en vez de dar un verde falso.
+
 > Contexto documental en `docs/clientes/lch/`. Los datos pendientes del cliente viven en
 > `docs/clientes/lch/pendientes-cliente.md`: mientras falten, placeholder ámbar, nunca
 > una cifra inventada.

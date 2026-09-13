@@ -10,5 +10,6 @@
   "homepage": "https://osigc.com",
   "license": "MIT",
   "keywords": ["cvh-precast", "lacasadehormigon", "wordpress", "elementor", "b2b", "guardrails"],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
 }
