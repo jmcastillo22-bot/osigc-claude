@@ -41,21 +41,21 @@ Pack de craft de diseño frontend (skills de terceros) para subir el nivel visua
 
 ## Plugin: `lch`
 
-Innegociables del proyecto **CVH PRECAST S.L. / La Casa de Hormigón** (`lch.osigc.cloud`).
-Guardarraíles de cliente: fija el entorno, las prohibiciones y los gates para que una
-sesión nueva no tenga que redescubrirlos.
+Decisiones vigentes del proyecto **CVH PRECAST S.L. / La Casa de Hormigón** (staging `lch.osigc.cloud`),
+cada una con fecha y origen (registro de cambios, decisión del owner o commit del repo `~/lch-build`).
+Una regla sin origen no entra.
 
 ### Skills
-- **lch-innegociables** — staging (`lch.osigc.cloud`) es el único entorno de trabajo;
-  producción es solo baseline de lectura. Prohibido instalar plugins de WordPress y
-  editar `_elementor_data`. Registro de cambios con SHA-256 y los 7 quality gates
-  bloqueantes. **Manda sobre las skills genéricas de diseño.**
-- **lch-formulario** — dos plantillas globales (particulares y profesionales) con un
-  esquema único de 8 campos ocultos, el campo `puerta` que protege el KPI C1, evento
-  GA4 único y gate de tests en 2 plantillas × 5 breakpoints.
-- **lch-doble-puerta** — la portada enruta en vez de vender, sin pantalla de selección
-  previa. Árbol de páginas, estructura fija de las fichas `/soluciones/`, taxonomía de
-  CTAs y copy prohibido.
+- **lch-innegociables** — decisiones vigentes: staging único, producción solo lectura, publica el owner;
+  pipeline real `gen*.py` → `instalar_*.php` con backup y SHA-256; mu-plugins en lugar de tema hijo;
+  cfef como excepción registrada; suite `make test` (repo `~/lch-build`) obligatoria antes de instalar y
+  antes de producción; precedencia sobre las skills genéricas de diseño.
+- **lch-formulario** — formularios multipaso de 6226/6227 y plantilla global 6231 con el esquema real de
+  8 ocultos (`perfil`, `rama`, `origen`, `utm_*`, `page_url`, `referrer`); `perfil` como puerta que
+  protege el KPI C1; eventos existentes de `lch-medicion.php` sin crear nuevos; documentación bajo petición.
+- **lch-doble-puerta** — portada de doble puerta tal como está aprobada, árbol real de URLs, cabecera
+  por perfil y nombres vigentes de los menús, estructura de fichas y de `/la-empresa/`, WhatsApp fuera
+  solo de la portada, copy prohibido.
 
 ### Hook (`plugins/lch/hooks/hooks.json`)
 - **form-gate.sh** (Stop) — gate §9.2: el formulario no se da por bueno sin test verde.
@@ -65,9 +65,9 @@ sesión nueva no tenga que redescubrirlos.
   existe pero Playwright no está instalado, avisa por stderr de que el gate **no se ha
   evaluado** en vez de dar un verde falso.
 
-> Contexto documental en `docs/clientes/lch/`. Los datos pendientes del cliente viven en
-> `docs/clientes/lch/pendientes-cliente.md`: mientras falten, placeholder ámbar, nunca
-> una cifra inventada.
+> La suite real del proyecto es `make test` en `~/lch-build` (19 comprobaciones contra el staging); el hook
+> de arriba sigue inerte hasta que exista una suite Playwright. Contraste con la 0.1.0 y pendientes del
+> cliente en `WEB/PR2-reconciliado/` (OneDrive del cliente) y `docs/clientes/lch/`.
 
 ## Instalación
 

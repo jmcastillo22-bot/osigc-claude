@@ -35,8 +35,8 @@
     {
       "name": "lch",
       "source": "./plugins/lch",
-      "description": "Innegociables del proyecto CVH PRECAST S.L. / La Casa de Hormigón (lch.osigc.cloud): staging como único entorno de trabajo, prohibición de plugins de WordPress y de editar _elementor_data, formulario de doble puerta con esquema único de 8 campos ocultos y quality gates bloqueantes. Manda sobre las skills genéricas de diseño.",
-      "version": "0.1.0",
+      "description": "Decisiones vigentes del proyecto CVH PRECAST S.L. / La Casa de Hormigón (staging lch.osigc.cloud), con fecha y origen: entorno, pipeline real (gen.py → instalar_*.php, mu-plugins, backup y hash), formulario y medición reales, árbol de URLs y navegación, suite de tests obligatoria y precedencia sobre las skills genéricas de diseño.",
+      "version": "0.2.0",
       "author": {
         "name": "Jose M. Castillo García",
         "url": "https://osigc.com"
