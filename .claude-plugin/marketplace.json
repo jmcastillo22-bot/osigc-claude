@@ -31,6 +31,19 @@
       "homepage": "https://osigc.com",
       "license": "MIT",
       "keywords": ["design", "frontend", "ui", "ux", "polish", "anti-slop", "design-system"]
+    },
+    {
+      "name": "lch",
+      "source": "./plugins/lch",
+      "description": "Decisiones vigentes del proyecto CVH PRECAST S.L. / La Casa de Hormigón (staging lch.osigc.cloud), con fecha y origen: entorno, pipeline real (gen.py → instalar_*.php, mu-plugins, backup y hash), formulario y medición reales, árbol de URLs y navegación, suite de tests obligatoria y precedencia sobre las skills genéricas de diseño.",
+      "version": "0.2.0",
+      "author": {
+        "name": "Jose M. Castillo García",
+        "url": "https://osigc.com"
+      },
+      "homepage": "https://osigc.com",
+      "license": "MIT",
+      "keywords": ["cvh-precast", "lacasadehormigon", "wordpress", "elementor", "b2b", "guardrails"]
     }
   ]
 }

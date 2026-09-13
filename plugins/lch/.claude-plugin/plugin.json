@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "lch",
+  "version": "0.2.0",
+  "description": "Decisiones vigentes del proyecto CVH PRECAST / La Casa de Hormigón (staging lch.osigc.cloud), cada una con fecha y origen: entorno, pipeline real (gen.py → instalar_*.php, mu-plugins, backup y hash), esquema real del formulario y la medición, árbol de URLs y navegación vigentes, suite de tests obligatoria (make test) y precedencia sobre las skills genéricas de diseño.",
+  "author": {
+    "name": "Jose M. Castillo García",
+    "url": "https://osigc.com"
+  },
+  "homepage": "https://osigc.com",
+  "license": "MIT",
+  "keywords": [
+    "cvh-precast",
+    "lacasadehormigon",
+    "wordpress",
+    "elementor",
+    "b2b",
+    "guardrails"
+  ],
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json"
+}
