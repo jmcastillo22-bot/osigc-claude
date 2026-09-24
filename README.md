@@ -39,6 +39,12 @@ Pack de craft de diseño frontend (skills de terceros) para subir el nivel visua
 
 > Skills de terceros, incluidas verbatim conservando licencia y atribución originales.
 
+## VPS: `vps/`
+
+Scripts de operación del VPS (HestiaCP + Docker con odoo19/postgres16/n8n): diagnóstico
+solo lectura, limpieza de disco en dry-run por defecto y volcado cifrado de los
+contenedores para que lo recoja el backup de Hestia. Runbook en [`vps/README.md`](vps/README.md).
+
 ## Instalación
 
 ```
