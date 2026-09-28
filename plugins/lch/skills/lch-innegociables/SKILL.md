@@ -90,10 +90,41 @@ nueva no puede citar origen, no se añade.
   (La Razón / Proarquitectura). Obras con ficha: Bonanza 362 m², Valdemorillo 334 m² (visitable),
   Colegio El Dragón (aulas, 8 fotos reales). *Registro 11/09 (bloque C).*
 
+### Decisiones vigentes de contenido (28/09/2026)
+
+Sustituyen a las anteriores que se citan. Origen: decisión del owner del 28/09 sobre los dos correos de
+Javi (`WEB/INFORME-peticiones-Javi-20260928.md`), registro `WEB/REGISTRO-CAMBIOS-lch.md` sección
+28/09/2026, tag `staging-2026-09-28-javi`; Notion «Decisiones del owner 28/09» en el Plan de Acción.
+
+- **Plazo: 7 meses en todo el sitio.** Sustituye al «6 meses» del 15/09. Las opciones de formulario
+  «En menos de 6 meses / Entre 6 y 12 meses» no se tocan (preguntan cuándo empezar). La confirmación
+  escrita del cliente está pendiente; el test 72 falla si reaparece «6 meses». *Owner, 28/09.*
+- **Título de casa «Modelo m² · Municipio»** («Palacios 382 · Valdemorillo»); si el modelo ya es el
+  municipio no se repite («Cerceda 266»). Una sola función: `lch_casas_titulo()` (campo ACF
+  `lch_modelo` de la obra). Sustituye a «solo el municipio» del 23/09. *Owner, 28/09.*
+- **IVA:** particulares «IVA 10 % incluido»; profesionales «+ 10 % IVA» (sustituye a «sin IVA» del
+  24/09); páginas compartidas (FAQ, bandas de precio) con las dos cifras —600 €/m² + 10 % IVA
+  (660 € IVA incluido), 2.000 €/m² + 10 % IVA (2.200 € IVA incluido)— y «precio orientativo, nunca
+  exacto». Cero «sin IVA», «IVA no incluido» e «IVA aparte» en particulares y FAQ. El PDF del cliente no
+  se toca. Banda de 2.000 €/m² autorizada por Javi por correo el 28/09. *Owner, 28/09.*
+- **Obras sin PDF de presupuesto** (Bonanza, Pinto, Torrelodones, Villalba, Pabellón La Moraleja): el
+  formulario de la ficha entrega el dossier de calidades por enlace firmado, promete el presupuesto
+  «en 48 h» y avisa a comercial@ con el nombre de la casa. Nunca un PDF inventado. *Owner, 28/09.*
+- **Menús de cuatro ítems y cabecera en una fila** (logo · menú del perfil · La empresa · «Contacta»,
+  sin conmutador en la cabecera). Sustituye a la cabecera de dos filas del 24/09. *Owner, 28/09.*
+- Aceptadas por el owner en la misma sesión: `/category/viviendas/` lista las obras del CPT como
+  obra-civil, estructuras-y-envolventes e interiores; en la nota de Valdelagua se retira el plazo en
+  vez de cambiarlo a 7 (no se atribuye a una casa un plazo que no consta); las fotos reales de paneles
+  CV+H de la página antigua de fachadas pasan a la ficha de ladrillo cara vista; brainsre.news sigue
+  enlazado (responde 200 a navegadores; el 202 es un filtro de bots). *Owner, 28/09.*
+- Los avisos «JAVI:» que no son datos de una obra van en widgets de texto de Elementor (editables por
+  Javi); los datos de cada obra, en los campos de la obra (grupos «Datos de la Construcción» y «Casa en
+  la web»). *Owner, 28/09 (bloque 1).*
+
 ## 5 · Gates bloqueantes
 
 Un cambio no está terminado si:
-1. `make test` no da 19/19 (o el número vigente) antes y después de instalar. *13/09.*
+1. `make test` no da el número vigente (76/76 a 28/09; 19/19 el 13/09) antes y después de instalar. *13/09; tag `staging-2026-09-28-javi-4`.*
 2. Falta backup previo, o falta la fila del registro con hashes. *10/09.*
 3. Hay un dato inventado o un hueco sin ámbar. *08/09.*
 4. Se ha añadido un plugin, librería o servicio sin decisión del owner con fecha. *08/09.*
