@@ -97,10 +97,17 @@ Origen: respuesta de Javi y decisiones del owner del 29/09; registro `WEB/REGIST
 
 - **Plazo de 7 meses: CONFIRMADO por escrito por el cliente el 29/09.** Decisión cerrada; riesgo del
   plazo en Notion → Mitigado. El test 72 sigue vigilando que no reaparezca «6 meses». *Cliente, 29/09.*
-- **Conmutador Particulares ⇄ Profesionales en la cabecera, junto al logo**, con el estilo del 11/09 por
-  la mañana (píldora blanca con filete, perfil activo en negro, dorado al pasar; en <768 px arriba del
-  panel del menú). **Decisión del cliente: NO volver a quitarlo ni moverlo** sin orden escrita del
-  cliente. Revoca «sin conmutador en la cabecera» del 11/09 y del 28/09. Test 78. *Cliente, 29/09.*
+- **Conmutador Particulares · Profesionales en la cabecera, primera fila, tras «La empresa»** (píldora oscura
+  `.lch-hpill` de 23–27/09 en lugar de «Contacta» en escritorio; <1181 px, la píldora flotante). Historia: quitado 11/09
+  (owner) · reintroducido 23–24/09 · sin él 28/09 · pedido por el cliente 29/09 («que quede arriba tal y como estaba»).
+  **Decisión del cliente: NO volver a quitarlo ni moverlo** sin orden escrita. El de la mañana del 29/09 (píldora blanca
+  junto al logo, estilo 11/09) quedó revocado esa misma tarde. Test 78. *Cliente, 29/09 tarde.*
+- **Menú «Obras realizadas»:** mega-menú de tres fotos (Una planta · Dos plantas o más · Con sótano) → /nuestras-casas/#…
+  (el carrusel no filtra por categoría). *Owner, 29/09 tarde.*
+- **Titulares de prensa:** los tres de portada como el 24–26/09 (horizontal; El Mundo · La Razón · La Voz de Galicia),
+  en widgets; debajo el clúster de todos los medios. Logotipos solo de la web del propio medio, con origen registrado.
+  *Owner, 29/09 tarde.*
+- **Heroes:** titular, subtítulo y botón centrados en los dos ejes (±8 px) y texto a 60–70 caracteres por línea. *Owner, 29/09 tarde.*
 - **Menú de particulares con una sola entrada de casas:** «Obras realizadas» → `/particulares/#casas`
   (carrusel de casas construidas). «Nuestras casas» fuera del menú (la página sigue publicada). Menú de
   profesionales sin cambios. Revoca los «menús de cuatro ítems» en particulares. *Cliente, 29/09.*
