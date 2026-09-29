@@ -90,6 +90,31 @@ nueva no puede citar origen, no se añade.
   (La Razón / Proarquitectura). Obras con ficha: Bonanza 362 m², Valdemorillo 334 m² (visitable),
   Colegio El Dragón (aulas, 8 fotos reales). *Registro 11/09 (bloque C).*
 
+### Decisiones vigentes (29/09/2026) · mandan sobre las del 28/09 donde choquen
+
+Origen: respuesta de Javi y decisiones del owner del 29/09; registro `WEB/REGISTRO-CAMBIOS-lch.md` sección
+29/09/2026, tag `staging-2026-09-29-javi`; Notion «Observaciones del cliente 29/09» en el Plan de Acción.
+
+- **Plazo de 7 meses: CONFIRMADO por escrito por el cliente el 29/09.** Decisión cerrada; riesgo del
+  plazo en Notion → Mitigado. El test 72 sigue vigilando que no reaparezca «6 meses». *Cliente, 29/09.*
+- **Conmutador Particulares ⇄ Profesionales en la cabecera, junto al logo**, con el estilo del 11/09 por
+  la mañana (píldora blanca con filete, perfil activo en negro, dorado al pasar; en <768 px arriba del
+  panel del menú). **Decisión del cliente: NO volver a quitarlo ni moverlo** sin orden escrita del
+  cliente. Revoca «sin conmutador en la cabecera» del 11/09 y del 28/09. Test 78. *Cliente, 29/09.*
+- **Menú de particulares con una sola entrada de casas:** «Obras realizadas» → `/particulares/#casas`
+  (carrusel de casas construidas). «Nuestras casas» fuera del menú (la página sigue publicada). Menú de
+  profesionales sin cambios. Revoca los «menús de cuatro ítems» en particulares. *Cliente, 29/09.*
+- **Sin shortcodes en bloques de contenido.** Casas = Loop Carousel/Loop Grid con la plantilla de bucle
+  «LCH · Tarjeta de casa (bucle)» (6642) y etiquetas dinámicas «LCH · Casa» (`lch-bucle.php`); línea de
+  tiempo y titulares de prensa en widgets. Solo quedan los técnicos: `lch_nav`, `lch_logo`,
+  `lch_pie_enlaces`, `lch_ficha`, `lch_dossier(es)`, `lch_descarga`, `lch_valoracion`, `lch_resenas` y
+  los del tema legacy. Un shortcode nuevo de contenido es regresión (test 77). *Owner, 29/09.*
+- **#6 (modalidad y año en la ficha): cerrado sin acción.** *Cliente, 29/09.*
+- **Aprobador final: José Manuel Ruiz García.** Ninguna ventana de producción se fija ni se ejecuta sin
+  su visto bueno escrito (anotado en la tarea de publicación de Notion). *Owner, 29/09.*
+- **Presupuestos en PDF:** alta con `wp lch-dl presupuesto <obra> <pdf>` (un comando por documento; retira
+  el aviso «en 48 h»). Nunca un PDF inventado. *Owner, 29/09.*
+
 ### Decisiones vigentes de contenido (28/09/2026)
 
 Sustituyen a las anteriores que se citan. Origen: decisión del owner del 28/09 sobre los dos correos de
@@ -110,8 +135,8 @@ Javi (`WEB/INFORME-peticiones-Javi-20260928.md`), registro `WEB/REGISTRO-CAMBIOS
 - **Obras sin PDF de presupuesto** (Bonanza, Pinto, Torrelodones, Villalba, Pabellón La Moraleja): el
   formulario de la ficha entrega el dossier de calidades por enlace firmado, promete el presupuesto
   «en 48 h» y avisa a comercial@ con el nombre de la casa. Nunca un PDF inventado. *Owner, 28/09.*
-- **Menús de cuatro ítems y cabecera en una fila** (logo · menú del perfil · La empresa · «Contacta»,
-  sin conmutador en la cabecera). Sustituye a la cabecera de dos filas del 24/09. *Owner, 28/09.*
+- ~~**Menús de cuatro ítems y cabecera en una fila** (logo · menú del perfil · La empresa · «Contacta»,
+  sin conmutador en la cabecera).~~ **Revocada el 29/09** en lo del conmutador y el menú de particulares (ver arriba); la fila única y «Contacta» siguen. *Owner, 28/09.*
 - Aceptadas por el owner en la misma sesión: `/category/viviendas/` lista las obras del CPT como
   obra-civil, estructuras-y-envolventes e interiores; en la nota de Valdelagua se retira el plazo en
   vez de cambiarlo a 7 (no se atribuye a una casa un plazo que no consta); las fotos reales de paneles
@@ -124,7 +149,7 @@ Javi (`WEB/INFORME-peticiones-Javi-20260928.md`), registro `WEB/REGISTRO-CAMBIOS
 ## 5 · Gates bloqueantes
 
 Un cambio no está terminado si:
-1. `make test` no da el número vigente (76/76 a 28/09; 19/19 el 13/09) antes y después de instalar. *13/09; tag `staging-2026-09-28-javi-4`.*
+1. `make test` no da el número vigente (81/81 a 29/09; 76/76 el 28/09; 19/19 el 13/09) antes y después de instalar. *13/09; tag `staging-2026-09-29-javi`.*
 2. Falta backup previo, o falta la fila del registro con hashes. *10/09.*
 3. Hay un dato inventado o un hueco sin ámbar. *08/09.*
 4. Se ha añadido un plugin, librería o servicio sin decisión del owner con fecha. *08/09.*
