@@ -97,17 +97,30 @@ Origen: respuesta de Javi y decisiones del owner del 29/09; registro `WEB/REGIST
 
 - **Plazo de 7 meses: CONFIRMADO por escrito por el cliente el 29/09.** Decisión cerrada; riesgo del
   plazo en Notion → Mitigado. El test 72 sigue vigilando que no reaparezca «6 meses». *Cliente, 29/09.*
-- **Conmutador Particulares · Profesionales en la cabecera, primera fila, tras «La empresa»** (píldora oscura
-  `.lch-hpill` de 23–27/09 en lugar de «Contacta» en escritorio; <1181 px, la píldora flotante). Historia: quitado 11/09
-  (owner) · reintroducido 23–24/09 · sin él 28/09 · pedido por el cliente 29/09 («que quede arriba tal y como estaba»).
-  **Decisión del cliente: NO volver a quitarlo ni moverlo** sin orden escrita. El de la mañana del 29/09 (píldora blanca
-  junto al logo, estilo 11/09) quedó revocado esa misma tarde. Test 78. *Cliente, 29/09 tarde.*
+- **Conmutador Particulares · Profesionales SOLO flotante, abajo a la izquierda** (`#lch-perfil-pill`, en todos los
+  anchos; nada en la cabecera). «Contacta» a la derecha de la cabecera con la MISMA forma que un botón del conmutador
+  (píldora dorada, borde oscuro 4 px, Tenor Sans 13 px). Historia: quitado 11/09 · reintroducido 23–24/09 · sin él 28/09 ·
+  en cabecera 29/09 tarde (cliente) · **flotante abajo a la izquierda 29/09 tarde-2 (orden del owner, vigente)**.
+  No moverlo sin orden escrita. Test 78. *Owner, 29/09 tarde-2.*
 - **Menú «Obras realizadas»:** mega-menú de tres fotos (Una planta · Dos plantas o más · Con sótano) → /nuestras-casas/#…
   (el carrusel no filtra por categoría). *Owner, 29/09 tarde.*
-- **Titulares de prensa:** los tres de portada como el 24–26/09 (horizontal; El Mundo · La Razón · La Voz de Galicia),
+- **Titulares de prensa:** los tres de portada como el 24–26/09 (horizontal; **AECI · La Razón · La Voz de Galicia**: un medio no
+  puede estar a la vez en titulares y en Premios, y El Mundo solo tiene la mención del premio — tarde-2),
   en widgets; debajo el clúster de todos los medios. Logotipos solo de la web del propio medio, con origen registrado.
   *Owner, 29/09 tarde.*
 - **Heroes:** titular, subtítulo y botón centrados en los dos ejes (±8 px) y texto a 60–70 caracteres por línea. *Owner, 29/09 tarde.*
+  Tarde-2: texto blanco siempre con sombra oscura como la portada y velo radial detrás del bloque (legible sobre fotos claras);
+  ritmo 14 · 24 · 40 · 28 px (antetítulo · titular · subtítulo · botones · enlace), móvil 10 · 18 · 28 · 20; todo lo que
+  vaya en el bloque (p. ej. la píldora de WhatsApp) centrado con `margin:0 auto`. Portada: texto a la izquierda con filete
+  dorado y degradado lateral (no se centra).
+- **Barra inferior del móvil:** tres columnas iguales (Teléfono · WhatsApp · Contacta); la jerarquía la da el color. *Owner, 29/09 tarde-2.*
+- **Formulario profesional mínimo (6427):** perfil (si no viene preseleccionado) · una pregunta abierta de proyecto · nombre,
+  apellidos, empresa, correo, teléfono. Los 8 ocultos y las acciones no se tocan. /contacto/ muestra el formulario del
+  recorrido activo; sin recorrido, el de particulares con selector de perfil primero. Dossier: sin «¿particular o
+  profesional?» si el recorrido ya se conoce. *Owner, 29/09 tarde-2.*
+- **Datos provisionales de casas:** si falta un dato en la obra, se copia de la casa más parecida (mismas tipología y plantas,
+  m² más cercano) con el sufijo «(provisional, copiado de <casa>)» en «Casa en la web»; la ficha muestra «Datos provisionales ·
+  pendientes de confirmar» y el carrusel «· provisional». El precio copiado nunca entra en un PDF. *Owner, 29/09 tarde-2.*
 - **Menú de particulares con una sola entrada de casas:** «Obras realizadas» → `/particulares/#casas`
   (carrusel de casas construidas). «Nuestras casas» fuera del menú (la página sigue publicada). Menú de
   profesionales sin cambios. Revoca los «menús de cuatro ítems» en particulares. *Cliente, 29/09.*
