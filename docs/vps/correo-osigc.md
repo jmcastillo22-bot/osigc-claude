@@ -32,7 +32,7 @@ Hostnames: `mail.osigc.com` (IMAP/SMTP), `webmail.osigc.com`, `mta-sts.osigc.com
 | `TXT _mta-sts` | `v=STSv1; id=20261102` (política en `https://mta-sts.osigc.com/.well-known/mta-sts.txt`, `mode: testing`) |
 | PTR (hPanel) | `148.230.108.106 → mail.osigc.com` (guardado 02/11 13:33 CET) |
 
-Pendiente de publicar (bloque 2): MX secundario, `A autoconfig`/`autodiscover`, SRV `_imaps._tcp`, `_submission._tcp`, `_submissions._tcp`, `_autodiscover._tcp`.
+Pendiente de publicar: `A autoconfig`/`autodiscover`, SRV `_imaps._tcp`, `_submission._tcp`, `_submissions._tcp`, `_autodiscover._tcp`.
 Squarespace pide un código por email (jmcastillo1401@gmail.com) en cada sesión de edición: abrir el formulario una sola vez por código.
 `include:brevo.com` era incorrecto (autoriza Google y Zendesk); el bueno es `include:spf.brevo.com`.
 
@@ -109,4 +109,5 @@ Restauración probada el 02/11/2026 con datos reales: 588 + 1662 mensajes, 0 dif
 
 - 02/11/2026: corte de Zoho al VPS (MX ~14:15 CET), importación completa y 2.ª exportación; mail-tester 10/10;
   Gmail SPF/DKIM/DMARC PASS. PTR de Hostinger inconsistente entre nodos rdns (pendiente de ticket).
-- Pendiente: MX secundario, DMARC a quarantine (~23/11), autenticar osigc.com en Brevo si se usa para masivo.
+- Sin MX secundario (decisión del owner 02/11: se confía en los reintentos del remitente, 4–5 días, y en las alertas cada 15 min).
+- Pendiente: DMARC a quarantine (~23/11), autenticar osigc.com en Brevo si se usa para masivo.
